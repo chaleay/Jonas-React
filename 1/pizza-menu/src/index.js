@@ -110,8 +110,7 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      {new Date().toLocaleDateString()}{" "}
-      {isOpen ? (
+      {true ? (
         <Order closeHour={closeHour} openHour={openHour}></Order>
       ) : (
         "We're Closed"
@@ -120,7 +119,7 @@ const Footer = () => {
   );
 };
 
-const Order = (closeHour, openHour) => {
+const Order = ({ closeHour, openHour }) => {
   return (
     <div className="order">
       <p>
